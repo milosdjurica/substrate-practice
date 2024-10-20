@@ -116,5 +116,8 @@ fn testnet_genesis(
             // Assign network admin rights.
             "key": Some(root_key),
         },
+        "pallet_funding": {
+            "Owner": get_account_id_from_seed::<sr25519::Public>("Alice"), // Set Alice as the owner
+        },
     })
 }
